@@ -30,6 +30,8 @@
 				<tr>
 					<th>Patient Name</th>
 					<th>Oxygen Levels</th>
+					<th>Pulse</th>
+					<th>Temperature</th>
 					<th>Action</th>
 				</tr>
 			</thead>
@@ -72,7 +74,7 @@
 				{
 					var details=jsonData.message.split(',');
 					var row=document.getElementById('patients').insertRow();
-					row.innerHTML="<td>"+details[0]+"</td><td>"+details[1]+"</td><td><button class=\"btn btn-danger btn-sm\" onclick=\"sendInstructions('"+details[0]+"','ambulance')\">Summon Ambulance</button><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"sendInstructions('"+details[0]+"','medication')\">Suggest Medication</button></td>";
+					row.innerHTML="<td>"+details[0]+"</td><td>"+details[1]+"</td><td>"+details[2]+"</td><td>"+details[3]+"</td><td><button class=\"btn btn-danger btn-sm\" onclick=\"sendInstructions('"+details[0]+"','ambulance')\">Summon Ambulance</button><button type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"sendInstructions('"+details[0]+"','medication')\">Suggest Medication</button></td>";
 				}
 		}
 		function sendInstructions(username,message)

@@ -13,7 +13,7 @@
 		<label style="margin-top: 30px;">
 			You Will be Notified when a patient requires ambulance 
 		</label>
-		<table id="patients" class="table" style="margin-top: 30px;">
+		<table id="patients" class="w-100" style="margin-top: 30px;">
 			<thead>
 				<tr>
 					<th>Patient Name</th>
@@ -44,6 +44,7 @@
 		function showPopup(message){
 			const popup=document.createElement("div");
 			popup.classList.add("popup");
+			popup.classList.add("text-dark");
 			popup.innerText=message;
 			document.querySelector("body").appendChild(popup);
 			setTimeout(()=>{

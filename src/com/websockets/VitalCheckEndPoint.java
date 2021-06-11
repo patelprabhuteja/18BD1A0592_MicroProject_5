@@ -26,9 +26,7 @@ public class VitalCheckEndPoint {
 			subscribers.stream().forEach(x -> {
 				try {
 					if (x.getUserProperties().get("username").equals("Doctor")) {
-						if(Integer.parseInt(message)<90) {
-							x.getBasicRemote().sendText(buildJSON(username, message));
-						}
+						x.getBasicRemote().sendText(buildJSON(username, message));
 					}
 				} catch (Exception e) {
 					e.printStackTrace();
