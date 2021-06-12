@@ -58,7 +58,7 @@
 				else
 				{
 					showPopup(details[0]+" has summoned an ambulance.","dark");
-					//alert(details[0]+" has summoned an ambulance");
+					alert(details[0]+" has summoned an ambulance");
 					row.innerHTML="<td>"+details[0]+"</td><td></td><td>"+details[1]+"</td>";		
 				}
 			}
